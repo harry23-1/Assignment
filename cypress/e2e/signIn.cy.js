@@ -8,7 +8,7 @@ describe('SignIn', () => {
       SignIn.password().type('incorrectpassword');
       SignIn.submitButton().click();
   
-      cy.url().should('include', '/user/login');
+      cy.url().should('include', 'https://next-realworld.vercel.app/user/login');
       cy.get('.error-message').should('be.visible').and('contain', 'email or password is invaid');
     });
   

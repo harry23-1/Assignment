@@ -13,7 +13,7 @@ describe('SignUp', () => {
       SignUp.password().type('password');
       SignUp.submitButton().click();
   
-      cy.url().should('include', '/user/register');
+      cy.url().should('include', 'https://next-realworld.vercel.app/user/register');
       cy.get('.error-message').should('be.visible').and('contain', 'email is already taken');
     });
   
